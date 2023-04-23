@@ -1,0 +1,175 @@
+/*O root permite criar variáveis para todo o css*/
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "inter";
+}
+
+/*Zerando as margens e espaçamentos padrões gerados pelos navegadores.*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*Container principal*/
+
+.principal {
+    background-image: url(img/Background.png);/**/
+    background-repeat: no-repeat; /*na classe container, para nao repetir a imagem*/
+    background-size: contain; /*a largura do container*/
+    align-items: center;
+    text-align: center;/*alinha não só texto e sim tudo dentro do bloco*/
+}
+
+.container {
+    height: 100vh;/*na classe container o 100 vh é 100% da altura*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 6em;
+    /*0 para em cima e em baixo, poderia ser como no proximo  container*/
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*como um relogio, em cima, direita, em baixo e esquerda*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;   /*especificando - right, left, etc...*/
+}
+
+.container__botao:hover{
+    background-color: #4e92e6;
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.botao__secundario:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+/*Containeres secundários*/
+
+.secudario__imagem {
+    width: 80%;
+    
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;  
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 1em;
+}
+
+/*flexbox*/
+
+.dispositivos {
+    text-align: center;
+    margin: 5em 0;
+}
+
+.dispositivos__titulos {
+    font-size: 48px;
+    color: var(--branco-principal);
+
+}
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.lista_item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*footer*/
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo {
+    margin: 1em 0em;
+}
+
+.lista__link {
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 16px;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    color: var(--cinza-secundario);
+    text-decoration: none;
+}
+
+.lista__link a:hover {
+    color: var(--branco-principal)
+}
+
+.lista__link a:active {
+    color: #4e92e6;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+
+
